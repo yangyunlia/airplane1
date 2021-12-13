@@ -6,25 +6,17 @@
 
 #IncludeRegexTransform: 
 
-E:/cProject/airplane1/airplane.c
-airplane.h
-E:/cProject/airplane1/airplane.h
-stdio.h
--
-stdlib.h
--
-string.h
--
-queue.h
-E:/cProject/airplane1/queue.h
-
 E:/cProject/airplane1/airplane.h
 datetime.h
 E:/cProject/airplane1/datetime.h
 
 E:/cProject/airplane1/datetime.h
 
-E:/cProject/airplane1/queue.h
+E:/cProject/airplane1/main.c
+stdio.h
+-
+string.h
+-
 airplane.h
 E:/cProject/airplane1/airplane.h
 

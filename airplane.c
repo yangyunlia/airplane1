@@ -100,7 +100,9 @@ void dfsImpl(struct airport *node, void (*p)(struct airport *node)) {
     struct airplaneInfo *info = node->head->next; //边的链表
     while (info != NULL) {
         //等于count证明还没有被遍历，则遍历
-        if(info->arrivalAirportNode->traverCount == count) {
+        struct airport *arrivalAirport = info->arrivalAirportNode;
+        if(arrivalAirport->traverCount == count && compareDateTime(node->arrivalTime, info->departureTime) <= 0) {
+            arrivalAirport->arrivalTime = info->arrivalTime;
             dfsImpl(info->arrivalAirportNode, p);
         }
         info = info->next;
@@ -114,9 +116,10 @@ void dfs(struct airport *head, void (*p)(struct airport *node)) {
     }
     int count  = n->traverCount;
     while (n != NULL) {
-
         //等于count证明还没有被遍历
         if(n->traverCount == count) {
+            char s[] = {"0/0/0"};
+            n->arrivalTime = parseDate(s);
             dfsImpl(n, p);
         }
         n = n->next;
@@ -132,15 +135,17 @@ void bfsImpl(struct airport *node, void (*p)(struct airport *node)) {
     enQueue(q, e);
     //队列非空
     while (isEmpty(q) == 0) {
-        e = deQueue(q);
+        struct  airport * departureAirport = deQueue(q);
         struct airplaneInfo *info = e->head->next;
         while (info != NULL) {
+            struct airport * arrivalPort = info->arrivalAirportNode;
             //如果路径的终点的遍历次数等于count，证明这个中的还没有被遍历
-            e = info->arrivalAirportNode;
-            if(e->traverCount == count) {
-                p(e);
-                e->traverCount++;
-                enQueue(q, e);
+            //并判断出发机场的到达时间是否小于该航班的出发时间，小于才可以搭乘
+            if(arrivalPort->traverCount == count && compareDateTime(departureAirport->arrivalTime, info->departureTime) <= 0) {
+                p(arrivalPort);
+                arrivalPort->arrivalTime = info->arrivalTime;
+                arrivalPort->traverCount++;
+                enQueue(q, arrivalPort);
             }
             info = info->next;
         }
@@ -156,6 +161,8 @@ void bfs(struct airport *head, void (*p)(struct airport *node)) {
     while (n != NULL) {
         //等于count证明还没有被遍历
         if(n->traverCount == count) {
+            char s[] = {"0/0/0"};
+            n->arrivalTime = parseDate(s);//初始时间
             bfsImpl(n, p);
         }
         n = n->next;

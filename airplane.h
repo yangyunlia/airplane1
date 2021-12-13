@@ -27,6 +27,7 @@ typedef struct airplaneInfo{
 typedef struct airport {
     int airportId; //机场
     int traverCount; //遍历的时候设置，初始值为0，每遍历一次+1
+    datetime *arrivalTime;//到达改机场的时间
     struct airplaneInfo * head;//以该机场为出发机场的所有机场信息组成的链表。
     struct airport *next;//指向下一个机场的指针
 };
