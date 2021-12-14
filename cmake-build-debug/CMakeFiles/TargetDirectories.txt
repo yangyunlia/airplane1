@@ -1,3 +1,3 @@
-E:/cProject/airplane1/cmake-build-debug/CMakeFiles/airplane1.dir
-E:/cProject/airplane1/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/cProject/airplane1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/yangruiyuan/airplane1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/yangruiyuan/airplane1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/yangruiyuan/airplane1/cmake-build-debug/CMakeFiles/airplane1.dir

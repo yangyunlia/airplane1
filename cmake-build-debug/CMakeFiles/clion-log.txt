@@ -1,4 +1,4 @@
-"E:\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - NMake Makefiles" E:\cProject\airplane1
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/yangruiyuan/airplane1
 -- Configuring done
 -- Generating done
--- Build files have been written to: E:/cProject/airplane1/cmake-build-debug
+-- Build files have been written to: /Users/yangruiyuan/airplane1/cmake-build-debug

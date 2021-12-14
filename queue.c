@@ -9,6 +9,7 @@ struct queue * createQueue() {
     struct queue * head  = malloc(sizeof(struct queue));
     head->next = head;
     head->pre = head;
+    return head;
 }
 struct airport *deQueue(struct queue *head) {
     struct airport *e = head->next->e;
@@ -28,6 +29,16 @@ void enQueue(struct queue *head, struct airport *e) {
 int isEmpty(struct queue *head) {
     if(head->next == head) {
         return 1;
+    }
+    return 0;
+}
+
+int queueContain(struct queue *head, struct airport *e) {
+    struct queue *p = head->next;
+    while (p != head) {
+        if(p->e == e) {
+            return 1;
+        }
     }
     return 0;
 }

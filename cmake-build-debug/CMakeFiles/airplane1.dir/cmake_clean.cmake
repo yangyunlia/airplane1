@@ -1,11 +1,13 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/airplane1.dir/airplane.c.obj"
-  "CMakeFiles/airplane1.dir/datetime.c.obj"
-  "CMakeFiles/airplane1.dir/main.c.obj"
-  "CMakeFiles/airplane1.dir/queue.c.obj"
-  "airplane1.exe"
-  "airplane1.exe.manifest"
-  "airplane1.lib"
+  "CMakeFiles/airplane1.dir/airplane.c.o"
+  "CMakeFiles/airplane1.dir/airplane.c.o.d"
+  "CMakeFiles/airplane1.dir/datetime.c.o"
+  "CMakeFiles/airplane1.dir/datetime.c.o.d"
+  "CMakeFiles/airplane1.dir/main.c.o"
+  "CMakeFiles/airplane1.dir/main.c.o.d"
+  "CMakeFiles/airplane1.dir/queue.c.o"
+  "CMakeFiles/airplane1.dir/queue.c.o.d"
+  "airplane1"
   "airplane1.pdb"
 )
 

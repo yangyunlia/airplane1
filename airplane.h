@@ -32,7 +32,17 @@ typedef struct airport {
     struct airport *next;//指向下一个机场的指针
 };
 
+typedef struct map {
+    int *array;
+    int n;
+};
+
 struct airport* parserAirplaneInfo(char *fileName); //解析文件，生成邻接表
 void dfs(struct airport *head, void (*p)(struct airport *node)); //深度优先搜索,p是一个函数指针，用于操作的时候处理node信息
 void bfs(struct airport *head, void (*p)(struct airport *node)); //广度优先搜索
+struct map * createMap(int n);
+int getMapData(struct map *m,int i, int j);
+void setMapData(struct map *m,int i, int j, int data);
+void printfMap(struct map *m);
+struct map * liantong(struct  airport *head);
 #endif //AIRPLANE1_AIRPLANE_H

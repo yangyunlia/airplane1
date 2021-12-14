@@ -4,104 +4,100 @@
 	<Project>
 		<Option title="airplane1"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="msvc8"/>
+		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="E:/cProject/airplane1/cmake-build-debug"/>
+				<Option working_dir="/Users/yangruiyuan/airplane1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="airplane1">
-				<Option output="E:/cProject/airplane1/cmake-build-debug/airplane1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/cProject/airplane1/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="msvc8"/>
-				<Compiler>
-					<Add directory="E:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\shared"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\winrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\cppwinrt"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 airplane1"/>
-					<CompileFile command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="airplane1/fast">
-				<Option output="E:/cProject/airplane1/cmake-build-debug/airplane1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/cProject/airplane1/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="msvc8"/>
-				<Compiler>
-					<Add directory="E:\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\shared"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\winrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.19041.0\\cppwinrt"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 airplane1/fast"/>
-					<CompileFile command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="E:/cProject/airplane1/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
-					<CompileFile command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="E:/cProject/airplane1/cmake-build-debug"/>
+				<Option working_dir="/Users/yangruiyuan/airplane1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f E:\cProject\airplane1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/yangruiyuan/airplane1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="airplane1">
+				<Option output="/Users/yangruiyuan/airplane1/cmake-build-debug/airplane1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yangruiyuan/airplane1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 airplane1"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="airplane1/fast">
+				<Option output="/Users/yangruiyuan/airplane1/cmake-build-debug/airplane1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yangruiyuan/airplane1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 airplane1/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/yangruiyuan/airplane1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/cProject/airplane1/airplane.c">
+		<Unit filename="/Users/yangruiyuan/airplane1/airplane.c">
 			<Option target="airplane1"/>
 		</Unit>
-		<Unit filename="E:/cProject/airplane1/airplane.h">
+		<Unit filename="/Users/yangruiyuan/airplane1/airplane.h">
 			<Option target="airplane1"/>
 		</Unit>
-		<Unit filename="E:/cProject/airplane1/datetime.c">
+		<Unit filename="/Users/yangruiyuan/airplane1/datetime.c">
 			<Option target="airplane1"/>
 		</Unit>
-		<Unit filename="E:/cProject/airplane1/datetime.h">
+		<Unit filename="/Users/yangruiyuan/airplane1/datetime.h">
 			<Option target="airplane1"/>
 		</Unit>
-		<Unit filename="E:/cProject/airplane1/main.c">
+		<Unit filename="/Users/yangruiyuan/airplane1/main.c">
 			<Option target="airplane1"/>
 		</Unit>
-		<Unit filename="E:/cProject/airplane1/queue.c">
+		<Unit filename="/Users/yangruiyuan/airplane1/queue.c">
 			<Option target="airplane1"/>
 		</Unit>
-		<Unit filename="E:/cProject/airplane1/queue.h">
+		<Unit filename="/Users/yangruiyuan/airplane1/queue.h">
 			<Option target="airplane1"/>
 		</Unit>
-		<Unit filename="E:/cProject/airplane1/CMakeLists.txt">
+		<Unit filename="/Users/yangruiyuan/airplane1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

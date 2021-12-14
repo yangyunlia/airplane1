@@ -169,4 +169,86 @@ void bfs(struct airport *head, void (*p)(struct airport *node)) {
     }
 }
 
+void liantongDfsImpl(struct airport *node, struct queue *q) {
+    int count  = node->traverCount;
+    node->traverCount++; //被遍历次数加1
+    struct airplaneInfo *info = node->head->next; //边的链表
+    while (info != NULL) {
+        //等于count证明还没有被遍历，则遍历
+        struct airport *arrivalAirport = info->arrivalAirportNode;
+        if(arrivalAirport->traverCount == count && compareDateTime(node->arrivalTime, info->departureTime) <= 0) {
+            arrivalAirport->arrivalTime = info->arrivalTime;
+            liantongDfsImpl(info->arrivalAirportNode, q);
+        }
+        info = info->next;
+    }
+    enQueue(q, node);
+}
+
+void liantongDfs(struct airport *head, struct queue *q) {
+    struct airport *n = head->next;
+    if(n == NULL) {
+        return;
+    }
+    int count  = n->traverCount;
+    while (n != NULL) {
+        //等于count证明还没有被遍历
+        if(n->traverCount == count) {
+            char s[] = {"0/0/0"};
+            n->arrivalTime = parseDate(s);
+            liantongDfsImpl(n, q);
+        }
+        n = n->next;
+    }
+}
+
+struct map * createMap(int n) {
+    struct map *m = malloc(sizeof(struct map));
+    m->n = n;
+    m->array = malloc(sizeof(int) * n * n);
+    for(int i = 0; i < n*n; i++) {
+        m->array[i] = 0;
+    }
+    return m;
+}
+
+int getMapData(struct map *m,int i, int j) {
+    return m->array[i*m->n + j];
+}
+void setMapData(struct map *m,int i, int j, int data){
+    m->array[i*m->n + j] = data;
+}
+
+void printfMap(struct map *m) {
+    for(int i = 0; i < m->n; i++) {
+        for(int j = 0; j < m->n; j++) {
+            printf("%d ", getMapData(m, i, j));
+        }
+        printf("\n");
+    }
+}
+
+struct map * liantong(struct  airport *head) {
+    int i = 0;
+    struct airport *p = head->next;
+    while (p != NULL) {
+        i++;
+        p = p->next;
+    }
+    struct map *m = createMap(i);
+    struct queue *q = createQueue();
+    liantongDfs(head, q);
+    struct queue *qN = createQueue();
+    while (!isEmpty(q)) {
+        struct airport *qAirport = deQueue(q);
+        liantongDfsImpl(qAirport, qN);
+        while (!isEmpty(qN)) {
+            struct airport *qNAirport = deQueue(qN);
+            qNAirport->traverCount--;
+            setMapData(m, qAirport->airportId-1, qNAirport->airportId-1, 1);
+            setMapData(m, qNAirport->airportId-1, qAirport->airportId-1, 1);
+        }
+    }
+    return m;
+}
 
