@@ -35,6 +35,15 @@ datetime* parseDateTime(char date[]) {
     return dT;
 }
 
+datetime* dec(datetime *a, datetime *b) {
+    datetime *t = malloc(sizeof(datetime));
+    t->hour = a->hour-b->hour;
+    t->minute = a->minute - b->minute;
+    t->year = a->year - b->year;
+
+}
+
+
 int compareDateTime(datetime* t0, datetime* t1){
     if(t0->year > t1->year) {
         return 1;

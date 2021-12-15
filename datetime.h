@@ -13,5 +13,6 @@ typedef struct {
 }datetime;
 datetime* parseDate(char *);
 datetime* parseDateTime(char *);
+datetime* dec(datetime *a, datetime *b);// 时间a减去时间b
 int compareDateTime(datetime* t0, datetime* t1);
 #endif //AIRPLANE1_DATETIME_H

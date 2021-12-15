@@ -252,3 +252,13 @@ struct map * liantong(struct  airport *head) {
     return m;
 }
 
+//狄杰斯特拉算法
+struct queue * minTime(struct  airport *head,struct  airport *a, struct airport *b) {
+    int i = 0;
+    struct airport *p = head->next;
+    while (p != NULL) {
+        i++;
+        p = p->next;
+    }
+    datetime *
+}
